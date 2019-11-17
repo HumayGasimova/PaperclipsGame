@@ -234,10 +234,7 @@ export class ComputationalResources extends Component {
                         <div className="computationalResources-text">Operations: {Utility.commaSeparator(this.props.ops)}/{Utility.commaSeparator(this.props.opsMax)}</div>
                         {this.props.processorsNumberIsShown ? <div className="computationalResources-text">Creativity: {Utility.commaSeparator(this.props.creativity)}</div> : null}
                     </div>
-                
-                    {/* {this.props.showQuanumComputing ? <QuantumComputing/> : null} */}
                 </div>
-                {/* <QuantumComputing/>  */}
                 {this.props.quantumComputingIsShown ? <QuantumComputing/> : null}
             </div>
         )

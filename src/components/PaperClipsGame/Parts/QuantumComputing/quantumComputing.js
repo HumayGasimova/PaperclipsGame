@@ -58,7 +58,7 @@ export class QuantumComputing extends Component {
             this.props.captureCurrentQOps(captureQOps);
 
             if(this.props.ops >= this.props.opsMax && captureQOps > 0){
-                let randomNumber =  Math.floor(Math.random()*70);
+                let randomNumber = Math.floor(Math.random()*70);
                 this.props.updateOps(randomNumber);
             }else{
                 this.props.updateOps(captureQOps);
