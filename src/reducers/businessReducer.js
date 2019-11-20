@@ -5,10 +5,6 @@
 import * as actionTypes from "../constants/actionTypes";
 import * as projectsToAdd from '../constants/projectsToAdd';
 
-/**
-* Constants
-*/
-
 import {
     updateObject
 } from './utility';
