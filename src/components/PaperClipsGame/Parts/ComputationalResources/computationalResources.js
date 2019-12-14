@@ -221,7 +221,7 @@ export class ComputationalResources extends Component {
 
     renderComputationalResourses = () => {
         return(
-            <div>
+            <>
                 <div className="computationalResources">
                     <div className="computationalResources-label">Computational Resources</div>
                     <div className="computationalResources-line"/>
@@ -236,7 +236,7 @@ export class ComputationalResources extends Component {
                     </div>
                 </div>
                 {this.props.quantumComputingIsShown ? <QuantumComputing/> : null}
-            </div>
+            </>
         )
     }
 

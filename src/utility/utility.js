@@ -68,35 +68,23 @@ export const getRandomStrategyVal = () => {
     return  +(Math.random()*1).toFixed() + 1;
 } 
 
-const getAllValuesOfAPlayer = (playerResult, option) => {
-    let arrayOfValues = [];
-    switch(option) {
-        case "playerLeft":
-            playerResult.map(el => {
-                arrayOfValues.push(el.playerLeft.value)
-            })
-            return arrayOfValues.reduce((a,b)=>a+b);
-        case "playerTop":
-            playerResult.map(el => {
-                arrayOfValues.push(el.playerTop.value)
-            })
-            return arrayOfValues.reduce((a,b)=>a+b);
-    }
-} 
+const getAllValuesOfAPlayer = (playerResult, option) => playerResult
+        .map(el => el[option].value)
+        .reduce((a,b)=>a+b)
+
 
 export const getStrategyModelingResult = (plLeft, plTop) => {
 
-    let plLeftSumOfValues = getAllValuesOfAPlayer(plLeft, "playerLeft");
-    let plTopSumOfValues = getAllValuesOfAPlayer(plTop, "playerTop");
+    const plLeftSumOfValues = getAllValuesOfAPlayer(plLeft, "playerLeft");
+    const plTopSumOfValues = getAllValuesOfAPlayer(plTop, "playerTop");
 
-    let sum = +(plLeftSumOfValues + plTopSumOfValues).toFixed();
-    return sum;
+    return +(plLeftSumOfValues + plTopSumOfValues).toFixed();
 }
 
 export const getAllValuesOfAStrategicModelingCurrentList = (list) => {
-    let arrayOfValues = [];
-    list.map(el => {
-        arrayOfValues.push(el.val)
-    })
-    return arrayOfValues;
+    // let arrayOfValues = [];
+    // list.map(el => {
+    //     arrayOfValues.push(el.val)
+    // })
+    return list.map(el=>el.val);
 } 
