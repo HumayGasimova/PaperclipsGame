@@ -487,7 +487,7 @@ export class Projects extends Component {
                 break;
             case 'quantumTemporalReversion':
                 if(confirm("Are you sure you want to complete game")){
-                    localStorage.removeItem('store');
+                    localStorage.removeItem('storePaperclipsGameHG');
                     window.location.reload();
                 }else{
                    this.props.addProject(projectsToAdd.QuantumTemporalReversion)

@@ -58,11 +58,11 @@ class PaperClipsGame extends Component {
     }
 
     componentDidMount = () => {
-        let state = JSON.parse(localStorage.getItem('store')) === null ? this.props.store : {...JSON.parse(localStorage.getItem('store')), comments: ['Welcome to Universal Paperclips']};
+        let state = JSON.parse(localStorage.getItem('storePaperclipsGameHG')) === null ? this.props.store : {...JSON.parse(localStorage.getItem('storePaperclipsGameHG')), comments: ['Welcome to Universal Paperclips']};
    
         setInterval(()=>{
             let jsonStore = JSON.stringify(this.props.store)
-            localStorage.setItem('store',jsonStore)
+            localStorage.setItem('storePaperclipsGameHG',jsonStore)
         }, 10000);
 
         setInterval(()=>{
